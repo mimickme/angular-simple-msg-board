@@ -1,4 +1,17 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <td scope="col">Time Stamp</td>
+    <th scope="col"></th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let entry of textEntries; index as i">
+      <td>{{entry.timeStamp}}</td>
+      <td>{{entry.textValue}}</td>
+    </tr>
+  </tbody>
+</table>
 
-
-<input type="text" [formControl]="inputTextControl" (keyup.enter)="enterText()">
+<textarea type="text" [formControl]="inputTextControl" (keyup.enter)="enterText()"></textarea>
 
