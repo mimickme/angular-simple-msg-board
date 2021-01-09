@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'my-app',
@@ -7,4 +8,9 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+  inputTextControl = new FormControl('');
+
+  enterText() {
+    console.log(this.inputTextControl.value);
+  }
 }
